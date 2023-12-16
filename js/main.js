@@ -16,8 +16,6 @@ gsap.to(".intro__title", {
 
 btn.addEventListener("click", (e) => {
 	e.preventDefault()
-
-	// const labelFor = document.querySelector("label")
 	if (!firstname.value || firstname.value === null) {
 		const labelFor = document.querySelector("label")
 		labelFor.children[2].style.display = "none"

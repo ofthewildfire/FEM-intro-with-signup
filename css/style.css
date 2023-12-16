@@ -80,6 +80,11 @@ body {
   padding: 2em;
 }
 
+.intro {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .intro__title {
   font-size: 2rem;
   font-family: var(--poppins600-font);
@@ -213,7 +218,6 @@ input {
   }
 
   .intro {
-    display: grid;
     place-content: center;
     gap: 1.5em;
     text-align: left;
