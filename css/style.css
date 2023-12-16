@@ -1,0 +1,226 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font imports */
+
+@font-face {
+  font-family: 'Poppins-400';
+  src: url(/assets/fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins-500';
+  src: url(/assets/fonts/Poppins-Medium.ttf);
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins-600';
+  src: url(/assets/fonts/Poppins-SemiBold.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins-700';
+  src: url(/assets/fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* Fonts */
+  --poppins400-font: 'Poppins-400';
+  --poppins500-font: 'Poppins-500';
+  --poppins600-font: 'Poppins-600';
+  --poppins700-font: 'Poppins-700';
+  /* Colours */
+  --red-clr: #ff7a7a;
+  --green-clr: #38cc8c;
+  --blue-clr: #6055a5;
+  --dark_blue-clr: #3e3c49;
+  --gray_blue-clr: #b9b6d3;
+  --white-clr: #ffffff;
+
+  /* Bgs */
+  --bg_mobile: url(/assets/images/bg-intro-mobile.png);
+  --bg_desktop: url(/assets/images/bg-intro-desktop.png);
+}
+
+/* Styles */
+body {
+  background-color: var(--red-clr);
+  background-image: var(--bg_mobile);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--poppins400-font);
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+.main {
+  display: grid;
+  gap: 1.5625rem;
+  text-align: center;
+  color: var(--white-clr);
+  line-height: 1.5;
+  padding: 2em;
+}
+
+.intro__title {
+  font-size: 2rem;
+  font-family: var(--poppins600-font);
+}
+
+.sign-up {
+  display: grid;
+  gap: 25px;
+}
+
+.sign-up__banner {
+  background-color: var(--blue-clr);
+  padding: 1em 2em;
+  box-shadow: 0px 5px 5px #0000008c;
+  /* When blown up to 200% zoom this will center the text in the banner */
+  display: grid;
+  place-content: center;
+}
+
+.banner__text--bold {
+  font-family: var(--poppins700-font);
+}
+
+.sign-up__form {
+  padding: 2em;
+  background-color: var(--white-clr);
+  display: grid;
+  gap: 2.1875rem;
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray_blue-clr);
+  background-color: transparent;
+  position: relative;
+}
+
+.sign-up__form-err-icon {
+  display: none;
+  position: absolute;
+  transform: translateX(-95%);
+  left: 95%;
+}
+
+.sign-up__form-success-icon {
+  display: none;
+  position: absolute;
+  transform: translateX(-95%);
+  left: 95%;
+}
+
+.sign-up__form--err {
+  border: 2px solid var(--red-clr);
+  color: var(--red-clr);
+}
+
+.sign-up__form--success {
+  border: 2px solid var(--green-clr);
+  color: var(--green-clr);
+}
+
+.sign-up__form--err-msg {
+  color: var(--red-clr);
+  bottom: -2.5em;
+  right: 0;
+  font-size: .6875rem;
+  position: absolute;
+  font-style: italic;
+  font-family: var(--poppins700-font);
+}
+
+input {
+  font-family: var(--poppins600-font);
+  text-indent: 15px;
+  /* border-radius: 5px; */
+  width: 100%;
+  height: 100%;
+  padding: 1em 2em;
+}
+
+.form__btn {
+  background-color: var(--green-clr);
+  color: var(--white-clr);
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-family: var(--poppins500-font);
+  border-radius: 5px;
+}
+
+.form__small-print {
+  color: var(--gray_blue-clr);
+}
+
+.form__small-print--red {
+  color: var(--red-clr);
+  font-family: var(--poppins700-font);
+}
+
+/* Fem default attribution styles */
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  color: var(--green-clr);
+  font-family: var(--poppins700-font);
+  text-shadow: 0px 0px 2px --white-clr;
+}
+
+.attribution a {
+  color: var(--white-clr);
+}
+
+
+
+@media screen and (min-width: 60rem) {
+
+  body {
+    background-image: var(--bg_desktop);
+  }
+
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .intro {
+    display: grid;
+    place-content: center;
+    gap: 1.5em;
+    text-align: left;
+  }
+
+  .intro__title {
+    font-size: 3.5rem;
+  }
+
+  .intro__context-text {
+    font-size: 1.25rem;
+  }
+
+  .sign-up,
+  .intro {
+    padding: 0 3rem;
+  }
+}
