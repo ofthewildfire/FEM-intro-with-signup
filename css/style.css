@@ -97,6 +97,7 @@ body {
 .sign-up {
   display: grid;
   gap: 1.5625rem;
+
 }
 
 .sign-up__banner {
@@ -119,6 +120,7 @@ body {
   gap: 2.1875rem;
   grid-template-columns: 1fr;
   border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 label {
