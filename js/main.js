@@ -7,6 +7,13 @@ const btn = document.querySelector(".form__btn")
 const err_icon = document.querySelector(".sign-up__form-err-icon")
 const msg_status = document.querySelector(".sign-up__form--err-msg")
 
+gsap.registerPlugin(TextPlugin)
+gsap.to(".intro__title", {
+	duration: 2,
+	text: "Learn to code by watching others",
+	ease: "none",
+})
+
 btn.addEventListener("click", (e) => {
 	e.preventDefault()
 
